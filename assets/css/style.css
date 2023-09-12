@@ -1,0 +1,289 @@
+:root {
+    --logo-font: 'ADLaM Display', serif;
+    --serif-font: 'Cormorant Garamond', serif;
+    --sans-font: 'Montserrat', sans-serif;
+
+    --primary-color: rgb(255, 255, 255);
+    --secondary-color: rgb(0, 0, 0);
+    --gold-secondary-color: rgb(255, 223, 0);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    max-width: 100%;
+    color: var(--secondary-color);
+    font-family: var(--serif-font);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+/* header */
+header {
+    width: 100%;
+    position: fixed;
+    background-color: var(--primary-color);
+    z-index: 10;
+}
+
+.header,
+footer {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    padding: .5em 2em;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.header {
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+#logo h1 {
+    margin: auto;
+    align-items: center;
+    font-family: var(--logo-font);
+    font-size: 2.5em;
+    padding: .5em 0;
+}
+
+.logo-center {
+    width: 40px;
+    height: 40wpx;
+}
+
+
+#nav ul {
+    max-width: 100%;
+    display: flex;
+    align-items: right;
+    font-size: 1.2em;
+    font-family: var(--sans-font);
+    z-index: 10;
+}
+
+ul {
+    display: flex;
+    align-content: right;
+    gap: 2px;
+}
+
+.current-page {
+    border-bottom: 2px solid var(--gold-secondary-color);
+    color: var(--secondary-color);
+}
+
+#toggler {
+    display: none;
+}
+
+.sub-container {
+    position: relative;
+    width: fit-content;
+}
+
+#toggler+label {
+    font-size: 2em;
+    color: var(--secondary-color);
+    position: absolute;
+    cursor: pointer;
+    top: 28px;
+    right: 20px;
+}
+
+.close {
+    display: none;
+}
+
+.collapsing-nav {
+    display: none;
+}
+
+.collapsing-nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-top: 1px solid var(--gold-secondary-color);
+    border-bottom: 1px solid var(--gold-secondary-color);
+    color: var(--secondary-color);
+    font-size: 1.2em;
+    font-family: var(--sans-font);
+    padding: 1em;
+    row-gap: .2em;
+}
+
+.collapsing-nav>ul li {
+    padding: .3em;
+}
+
+.sub-container {
+    margin-left: 20px;
+}
+
+#toggler:checked~.collapsing-nav,
+#toggler:checked+label>span.close,
+#sub-toggler:checked~.collapsing-nav {
+    display: block;
+}
+
+#toggler:checked+label>span.open {
+    display: none;
+}
+    
+#nav i {
+    font-size: 2em;
+ }
+ 
+.main {
+    display: flex; 
+    height: 1000px;
+    background-color: black;
+ }
+
+ footer{
+    background-color: green;
+ }
+
+ /* Media query */
+
+ /* Large screens (large screen from 1800px and up) */
+ @media only screen and (min-width: 1800px) {
+ }
+   
+
+ /* Medium and large screens (992px and up */
+ @media only screen and (min-width: 993px) {
+ }
+
+ /* Medium screens ( 992px and down) */
+ @media only screen and (max-width: 992px) {
+
+     nav > div {
+         width: 100%;
+     }
+
+ }
+
+ /* Medium small screens (768px and up) */
+
+ @media only screen and (max-width: 840px) {
+     section {
+         flex-direction: column;
+         max-width: 100%;
+     }
+
+     .text-content {
+         max-width: 90%;
+     }
+
+     #about {
+         text-align: center;
+     }
+ }
+
+ /* All except mobile (768px and up) */
+
+ @media only screen and (min-width: 769px) {
+     #toggler:checked~.collapsing-nav {
+         display: none;
+     }
+
+     #video {
+         margin-top: 90px;
+
+     }
+ }
+
+ /* Larger or lanscape phones (576px and up) */
+ @media screen and (min-width: 576px) {
+     #photos {
+         column-count: 2;
+         column-gap: 0;
+     }
+ }
+
+
+ /* Small screens (768px and down) */
+
+ @media only screen and (max-width: 768px) {
+     * {
+         overflow: auto;
+     }
+
+     #nav i {
+         font-size: 1, 5em;
+     }
+
+     #nav ul {
+         display: flex;
+         justify-content: center;
+         gap: 2em;
+     }
+
+     #hero-text {
+         top: 50%;
+         left: 5%;
+     }
+
+     #hero-image {
+         background:
+             url(../images/table-event-flower_mobi.jpg);
+     }
+
+     .large-screen,
+     ul.large-screen li {
+         display: none;
+     }
+
+     .small-screen {
+         display: block;
+     }
+
+     .sticky-nav {
+         position: relative;
+         top: 0;
+     }
+
+     .sticky-nav ul {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+     }
+
+     #booking {
+         max-width: 100%;
+     }
+
+     #booking-confirmation {
+         width: 40%;
+     }
+
+     #video {
+         margin-top: 90px;
+     }
+
+     .form-container form {
+         width: 96%;
+     }
+
+     .form-background {
+         background-image: url(../images/table-event-flower.avif);
+         --position: center;
+     }
+
+     section div img {
+         max-width: 100%;
+         min-width: 200px;
+     }
+}
