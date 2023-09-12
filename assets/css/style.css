@@ -5,7 +5,7 @@
 
     --primary-color: rgb(255, 255, 255);
     --secondary-color: rgb(0, 0, 0);
-    --gold-secondary-color: rgb(255, 223, 0);
+    --gold-secondary-color: rgb(0, 128, 0);
 }
 
 * {
@@ -50,7 +50,6 @@ footer {
 
 #logo h1 {
     margin: auto;
-    align-items: center;
     font-family: var(--logo-font);
     font-size: 2.5em;
     padding: .5em 0;
@@ -62,21 +61,30 @@ footer {
 }
 
 
-#nav ul {
+#social ul {
     max-width: 100%;
     display: flex;
     align-items: right;
     font-size: 1.2em;
     font-family: var(--sans-font);
     z-index: 10;
+    gap: 2em;
 }
 
 ul {
     display: flex;
     align-content: right;
-    gap: 2px;
 }
 
+ #social i {
+    font-size: 2em;
+    color: var(--secondary-color);
+ }
+
+ #social i:hover {
+    background-color: var(--gold-secondary-color);
+    color: var(--primary-color);
+ }
 .current-page {
     border-bottom: 2px solid var(--gold-secondary-color);
     color: var(--secondary-color);
@@ -140,10 +148,7 @@ ul {
 #toggler:checked+label>span.open {
     display: none;
 }
-    
-#nav i {
-    font-size: 2em;
- }
+
  
 .main {
     display: flex; 
