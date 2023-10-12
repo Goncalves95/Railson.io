@@ -44,8 +44,8 @@ footer {
 .header {
     justify-content: space-between;
     align-items: center;
-    max-width: 1240px;
-    margin: 0 auto;
+    margin: 2 auto;
+    border-bottom: 2px solid black;
 }
 
 #logo h1 {
@@ -150,26 +150,22 @@ ul {
  /* Main Page */
 .main {
     display: flex; 
-    flex-direction: row;
     height: 1000px;
     background-color: black;
  }
 
  .images {
-    display: block;
-    justify-items: center;
+    height: 1000px;
+    display: inline-flex;
     justify-content: center;
+    align-items: center;
+    gap: 50px;
  }
 
- .image1, 
- .image2,
- .image3,
- .image4,
- .image5 {
-    width: 100px;
-    height: 250px;
-    
-    
+ 
+ div > img {
+    max-width: 300px;
+    max-height: 550px;
  }
 
 
