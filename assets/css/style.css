@@ -77,17 +77,15 @@ ul {
 }
 
  #social i {
-    font-size: 2em;
+    font-size: 3em;
     color: var(--secondary-color);
  }
 
  #social i:hover {
-    background-color: var(--gold-secondary-color);
-    color: var(--primary-color);
+      color: var(--gold-secondary-color);
  }
-.current-page {
-    border-bottom: 2px solid var(--gold-secondary-color);
-    color: var(--secondary-color);
+.toggle-menu{
+    display: none;
 }
 
 #toggler {
@@ -149,13 +147,33 @@ ul {
     display: none;
 }
 
- 
+ /* Main Page */
 .main {
     display: flex; 
+    flex-direction: row;
     height: 1000px;
     background-color: black;
  }
 
+ .images {
+    display: block;
+    justify-items: center;
+    justify-content: center;
+ }
+
+ .image1, 
+ .image2,
+ .image3,
+ .image4,
+ .image5 {
+    width: 100px;
+    height: 250px;
+    
+    
+ }
+
+
+/* Footer */
  footer{
     background-color: green;
  }
@@ -200,10 +218,6 @@ ul {
  /* All except mobile (768px and up) */
 
  @media only screen and (min-width: 769px) {
-     #toggler:checked~.collapsing-nav {
-         display: none;
-     }
-
      #video {
          margin-top: 90px;
 
