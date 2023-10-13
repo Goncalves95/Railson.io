@@ -1,7 +1,7 @@
 :root {
-    --logo-font: 'ADLaM Display', serif;
-    --serif-font: 'Cormorant Garamond', serif;
-    --sans-font: 'Montserrat', sans-serif;
+    --logo-font: 'suquel', serif;
+    --serif-font: 'Lexend_Mega', serif;
+    --sans-font: Helvetica, sans-serif;
 
     --primary-color: rgb(255, 255, 255);
     --secondary-color: rgb(0, 0, 0);
@@ -21,14 +21,21 @@ body {
     font-family: var(--serif-font);
     display: grid;
     grid-template-rows: auto 1fr auto;
+    flex-flow: auto;
+    background-color:var(--primary-color);
+    
 }
 
 /* header */
 header {
     width: 100%;
-    position: fixed;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
     background-color: var(--primary-color);
-    z-index: 10;
+    
+    
 }
 
 .header,
@@ -39,6 +46,8 @@ footer {
     padding: .5em 2em;
     background-color: var(--primary-color);
     color: var(--secondary-color);
+    background-color: var(--primary-color);
+   
 }
 
 .header {
@@ -48,16 +57,10 @@ footer {
     border-bottom: 2px solid black;
 }
 
-#logo h1 {
-    margin: auto;
-    font-family: var(--logo-font);
-    font-size: 2.5em;
-    padding: .5em 0;
-}
-
 .logo-center {
-    width: 40px;
-    height: 40wpx;
+    width: 300px;
+    height: 80wpx;
+    margin: auto;
 }
 
 
@@ -160,27 +163,114 @@ ul {
     align-items: center;
  }
  div > video {
-    width: auto;
-    height: 1250px;
-    background-color: blue;
+    height: 1000px;
+    width: 1200px;
+    justify-content: center;
+    align-items: center;
  }
 
 
 /* Footer */
  footer{
-    border-top: 2px solid black;
     justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
     
  }
 
  .whatsap i {
-    font-size: 3em;
+    font-size: 5em;
     color:var(--secondary-color);
+    padding-left: 10px;
  }
 
  .whatsap i:hover {
     color: var(--green-secondary-color);
  }
+
+.a {
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 120%;
+    font-family: var(--serif-font);
+}
+
+.glow-on-hover {
+     width: 220px;
+     height: 50px;
+     border: none;
+     outline: none;
+     color: #fff;
+     cursor: pointer;
+     position: relative;
+     z-index: 0;
+     border-radius: 10px;
+}
+
+.glow-on-hover:before {
+     content: '';
+     background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+     position: absolute;
+     top: -2px;
+     left: -2px;
+     background-size: 400%;
+     z-index: -1;
+     filter: blur(5px);
+     width: calc(100% + 4px);
+     height: calc(100% + 4px);
+     animation: glowing 20s linear infinite;
+     opacity: 0;
+     transition: opacity .3s ease-in-out;
+     border-radius: 10px;
+}
+
+.glow-on-hover:active {
+     color: #fff
+}
+
+.glow-on-hover:active:after {
+     background: transparent;
+}
+
+.glow-on-hover:hover:before {
+     opacity: 1;
+}
+
+.glow-on-hover:after {
+     z-index: -1;
+     content: '';
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     background: #fff;
+     left: 0;
+     top: 0;
+     border-radius: 10px;
+}
+
+@keyframes glowing {
+     0% {
+         background-position: 0 0;
+     }
+
+     50% {
+         background-position: 400% 0;
+     }
+
+     100% {
+         background-position: 0 0;
+     }
+}
+
  /* Media query */
 
  /* Large screens (large screen from 1800px and up) */
@@ -221,18 +311,12 @@ ul {
  /* All except mobile (768px and up) */
 
  @media only screen and (min-width: 769px) {
-     #video {
-         margin-top: 90px;
-
-     }
+    
  }
 
  /* Larger or lanscape phones (576px and up) */
  @media screen and (min-width: 576px) {
-     #photos {
-         column-count: 2;
-         column-gap: 0;
-     }
+     
  }
 
 
@@ -258,10 +342,6 @@ ul {
          display: none;
      }
 
-     .small-screen {
-         display: block;
-     }
-
      .sticky-nav {
          position: relative;
          top: 0;
@@ -281,9 +361,6 @@ ul {
          width: 40%;
      }
 
-     #video {
-         margin-top: 90px;
-     }
 
      .form-container form {
          width: 96%;
@@ -292,10 +369,5 @@ ul {
      .form-background {
          background-image: url(../images/table-event-flower.avif);
          --position: center;
-     }
-
-     section div img {
-         max-width: 100%;
-         min-width: 200px;
      }
 }
