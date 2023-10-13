@@ -5,7 +5,7 @@
 
     --primary-color: rgb(255, 255, 255);
     --secondary-color: rgb(0, 0, 0);
-    --gold-secondary-color: rgb(0, 128, 0);
+    --green-secondary-color: rgb(0, 128, 0);
 }
 
 * {
@@ -82,7 +82,7 @@ ul {
  }
 
  #social i:hover {
-      color: var(--gold-secondary-color);
+      color: var(--green-secondary-color);
  }
 .toggle-menu{
     display: none;
@@ -120,8 +120,8 @@ ul {
     justify-content: center;
     align-items: center;
     text-align: center;
-    border-top: 1px solid var(--gold-secondary-color);
-    border-bottom: 1px solid var(--gold-secondary-color);
+    border-top: 1px solid var(--green-secondary-color);
+    border-bottom: 1px solid var(--green-secondary-color);
     color: var(--secondary-color);
     font-size: 1.2em;
     font-family: var(--sans-font);
@@ -153,27 +153,34 @@ ul {
     height: 1000px;
     background-color: black;
  }
-
- .images {
-    height: 1000px;
-    display: inline-flex;
+ .video-div {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 50px;
  }
-
- 
- div > img {
-    max-width: 300px;
-    max-height: 550px;
+ div > video {
+    width: auto;
+    height: 1250px;
+    background-color: blue;
  }
 
 
 /* Footer */
  footer{
-    background-color: green;
+    border-top: 2px solid black;
+    justify-content: space-between;
+    
  }
 
+ .whatsap i {
+    font-size: 3em;
+    color:var(--secondary-color);
+ }
+
+ .whatsap i:hover {
+    color: var(--green-secondary-color);
+ }
  /* Media query */
 
  /* Large screens (large screen from 1800px and up) */
@@ -244,16 +251,6 @@ ul {
          display: flex;
          justify-content: center;
          gap: 2em;
-     }
-
-     #hero-text {
-         top: 50%;
-         left: 5%;
-     }
-
-     #hero-image {
-         background:
-             url(../images/table-event-flower_mobi.jpg);
      }
 
      .large-screen,
