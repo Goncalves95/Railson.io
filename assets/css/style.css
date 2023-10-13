@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@400;700&family=Unbounded:wght@400;700&display=swap');
+
 :root {
     --logo-font: 'suquel', serif;
-    --serif-font: 'Lexend_Mega', serif;
-    --sans-font: Helvetica, sans-serif;
+    --serif-font: 'Lexend+mega', serif;
+    --sans-font: 'Unbounded', sans-serif;
 
     --primary-color: rgb(255, 255, 255);
     --secondary-color: rgb(0, 0, 0);
