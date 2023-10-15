@@ -24,8 +24,8 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto;
     flex-flow: auto;
-    background-color:var(--primary-color);
-    
+    background-color: var(--primary-color);
+
 }
 
 /* header */
@@ -36,8 +36,8 @@ header {
     top: 0;
     left: 0;
     background-color: var(--primary-color);
-    
-    
+
+
 }
 
 .header,
@@ -49,7 +49,7 @@ footer {
     background-color: var(--primary-color);
     color: var(--secondary-color);
     background-color: var(--primary-color);
-   
+
 }
 
 .header {
@@ -81,15 +81,16 @@ ul {
     align-content: right;
 }
 
- #social i {
+#social i {
     font-size: 3em;
     color: var(--secondary-color);
- }
+}
 
- #social i:hover {
-      color: var(--green-secondary-color);
- }
-.toggle-menu{
+#social i:hover {
+    color: var(--green-secondary-color);
+}
+
+.toggle-menu {
     display: none;
 }
 
@@ -152,23 +153,30 @@ ul {
     display: none;
 }
 
- /* Main Page */
+/* Main Page */
 .video-div {
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-    background: #00ffd5;
-    position: relative;
+    /*Ajuste a largura e altura desejadas aqui*/
+    width: auto;
+    height: 1400px;
 
+    /*isto fará o elemento video e o .container se adaptarem ao .video-div*/
+    position: relative;
 }
 
-#video {
+.video-div>#video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /*apenas um -1 é necessário quando se trabalha com relative + absolute, sendo pai e filho*/
     width: 100%;
-    max-width: auto;
-    height: auto;
+    height: 100%;
     overflow: hidden;
-    justify-content: space-around;
-    align-items: center;
+    /* evita do video passar a altura desejada do .video-div */
+}
+
+.video-div>#video>video {
+    width: 100%;
 }
 
 .about {
@@ -189,10 +197,11 @@ ul {
     height: 300px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding-left: 50px;
     padding-right: 50px;
+    gap: 100px;
 }
 
 .cards {
@@ -206,7 +215,7 @@ ul {
 
 
 /* Footer */
- footer{
+footer {
     justify-content: space-between;
     align-items: center;
     justify-items: center;
@@ -215,18 +224,18 @@ ul {
     position: relative;
     bottom: 0;
     left: 0;
-    
- }
 
- .whatsap i {
+}
+
+.whatsap i {
     font-size: 5em;
-    color:var(--secondary-color);
+    color: var(--secondary-color);
     padding-left: 10px;
- }
+}
 
- .whatsap i:hover {
+.whatsap i:hover {
     color: var(--green-secondary-color);
- }
+}
 
 .a {
     text-decoration: none;
@@ -240,169 +249,163 @@ ul {
 }
 
 .glow-on-hover {
-     width: 220px;
-     height: 50px;
-     border: none;
-     outline: none;
-     color: #fff;
-     cursor: pointer;
-     position: relative;
-     z-index: 0;
-     border-radius: 10px;
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
 }
 
 .glow-on-hover:before {
-     content: '';
-     background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-     position: absolute;
-     top: -2px;
-     left: -2px;
-     background-size: 400%;
-     z-index: -1;
-     filter: blur(5px);
-     width: calc(100% + 4px);
-     height: calc(100% + 4px);
-     animation: glowing 20s linear infinite;
-     opacity: 0;
-     transition: opacity .3s ease-in-out;
-     border-radius: 10px;
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
 }
 
 .glow-on-hover:active {
-     color: #fff
+    color: #fff
 }
 
 .glow-on-hover:active:after {
-     background: transparent;
+    background: transparent;
 }
 
 .glow-on-hover:hover:before {
-     opacity: 1;
+    opacity: 1;
 }
 
 .glow-on-hover:after {
-     z-index: -1;
-     content: '';
-     position: absolute;
-     width: 100%;
-     height: 100%;
-     background: #fff;
-     left: 0;
-     top: 0;
-     border-radius: 10px;
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
 }
 
 @keyframes glowing {
-     0% {
-         background-position: 0 0;
-     }
+    0% {
+        background-position: 0 0;
+    }
 
-     50% {
-         background-position: 400% 0;
-     }
+    50% {
+        background-position: 400% 0;
+    }
 
-     100% {
-         background-position: 0 0;
-     }
+    100% {
+        background-position: 0 0;
+    }
 }
 
- /* Media query */
+/* Media query */
 
- /* Large screens (large screen from 1800px and up) */
- @media only screen and (min-width: 1800px) {
- }
-   
-
- /* Medium and large screens (992px and up */
- @media only screen and (min-width: 993px) {
- }
-
- /* Medium screens ( 992px and down) */
- @media only screen and (max-width: 992px) {
-
-     nav > div {
-         width: 100%;
-     }
-
- }
-
- /* Medium small screens (768px and up) */
-
- @media only screen and (max-width: 840px) {
-     section {
-         flex-direction: column;
-         max-width: 100%;
-     }
-
-     .text-content {
-         max-width: 90%;
-     }
-
-     #about {
-         text-align: center;
-     }
- }
-
- /* All except mobile (768px and up) */
-
- @media only screen and (min-width: 769px) {
-    
- }
-
- /* Larger or lanscape phones (576px and up) */
- @media screen and (min-width: 576px) {
-     
- }
+/* Large screens (large screen from 1800px and up) */
+@media only screen and (min-width: 1800px) {}
 
 
- /* Small screens (768px and down) */
+/* Medium and large screens (992px and up */
+@media only screen and (min-width: 993px) {}
 
- @media only screen and (max-width: 768px) {
-     * {
-         overflow: auto;
-     }
+/* Medium screens ( 992px and down) */
+@media only screen and (max-width: 992px) {
 
-     #nav i {
-         font-size: 1, 5em;
-     }
+    nav>div {
+        width: 100%;
+    }
 
-     #nav ul {
-         display: flex;
-         justify-content: center;
-         gap: 2em;
-     }
+}
 
-     .large-screen,
-     ul.large-screen li {
-         display: none;
-     }
+/* Medium small screens (768px and up) */
 
-     .sticky-nav {
-         position: relative;
-         top: 0;
-     }
+@media only screen and (max-width: 840px) {
+    section {
+        flex-direction: column;
+        max-width: 100%;
+    }
 
-     .sticky-nav ul {
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-     }
+    .text-content {
+        max-width: 90%;
+    }
 
-     #booking {
-         max-width: 100%;
-     }
+    #about {
+        text-align: center;
+    }
+}
 
-     #booking-confirmation {
-         width: 40%;
-     }
+/* All except mobile (768px and up) */
+
+@media only screen and (min-width: 769px) {}
+
+/* Larger or lanscape phones (576px and up) */
+@media screen and (min-width: 576px) {}
 
 
-     .form-container form {
-         width: 96%;
-     }
+/* Small screens (768px and down) */
 
-     .form-background {
-         background-image: url(../images/table-event-flower.avif);
-         --position: center;
-     }
+@media only screen and (max-width: 768px) {
+    * {
+        overflow: auto;
+    }
+
+    #nav i {
+        font-size: 1, 5em;
+    }
+
+    #nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 2em;
+    }
+
+    .large-screen,
+    ul.large-screen li {
+        display: none;
+    }
+
+    .sticky-nav {
+        position: relative;
+        top: 0;
+    }
+
+    .sticky-nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #booking {
+        max-width: 100%;
+    }
+
+    #booking-confirmation {
+        width: 40%;
+    }
+
+
+    .form-container form {
+        width: 96%;
+    }
+
+    .form-background {
+        background-image: url(../images/table-event-flower.avif);
+        --position: center;
+    }
 }
