@@ -181,15 +181,18 @@ ul {
 
 .about {
     display: block;
-    height: 100px;
+    height: 1000px;
     background: #002bff;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .about>h3 {
     color: #000;
-    justify-content: center;
-    align-items: center;
     width: 100%;
+    text-align: center;
 }
 
 .cards-service {
@@ -207,9 +210,11 @@ ul {
 .cards {
     width: 200px;
     height: 200px;
-    align-content: center;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    justify-content: center;
+    align-items: center;
     border: 1px solid black;
 }
 
