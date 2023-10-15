@@ -162,9 +162,9 @@ ul {
 
 }
 
-div>video {
+#video {
     width: 100%;
-    max-width: 1600px;
+    max-width: auto;
     height: auto;
     overflow: hidden;
     justify-content: space-around;

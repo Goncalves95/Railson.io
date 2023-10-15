@@ -1,3 +1,4 @@
-var vid = document.getElementsByClassName("video");
-vid.autoplay = true;
-vid.load();
+var vid = document.getElementsById("video");
+    vid.autoplay loop = true;
+    vid.load();
+}
