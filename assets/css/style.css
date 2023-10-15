@@ -153,23 +153,53 @@ ul {
 }
 
  /* Main Page */
-.main {
-    display: flex; 
-    height: 1000px;
-    background-color: black;
- }
- .video-div {
+..video-div {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background: #00ffd5;
+    width: 1200px;
+
+}
+
+.about {
+    display: block;
+    height: 100px;
+    background: #002bff;
+}
+
+.about>h3 {
+    color: #000;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+div>video {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards-service {
+    background: #48ff00;
+    height: 300px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
- }
- div > video {
-    height: 1000px;
-    width: 1200px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.cards {
+    width: 200px;
+    height: 200px;
+    align-content: center;
     justify-content: center;
-    align-items: center;
- }
+    text-align: center;
+    border: 1px solid black;
+}
 
 
 /* Footer */
