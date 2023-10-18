@@ -334,6 +334,13 @@ footer {
         overflow: hidden;
     }
 
+    #botoes a {
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 100px;
+    }
+
     .on_small_scrrens {
         display: flex;
         justify-content: center;
@@ -361,7 +368,7 @@ footer {
     }
 
     .button1,
-    .button2 {
+    .button2, .button3 {
         display: none;
     }
 
