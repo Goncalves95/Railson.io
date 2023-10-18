@@ -45,8 +45,8 @@ footer {
 }
 
 .header {
-    max-width: 1240px;
-    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
     justify-content: space-between;
 }
 
@@ -132,7 +132,7 @@ ul {
 
 .collapsing-nav>ul>li a {
     text-decoration: none;
-    color: var(--secondary-color);
+    color: var(--);
     font-family: var(--sans-font);
 }
 
