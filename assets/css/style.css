@@ -152,6 +152,7 @@ ul {
 
 /* Main Page */
 
+
 #video {
     position: absolute;
     top: 0;
@@ -206,6 +207,7 @@ button {
 button:hover {
     background-color: #45a049;
 }
+
 .on_small_scrrens {
     display: none;
 }
@@ -268,10 +270,6 @@ footer {
     ul {
         margin-right: 20px;
     }
-
-    #video {
-        object-fit: cover;
-    }
 }
 
 /* Small screens (768px and down) */
@@ -282,7 +280,8 @@ footer {
     }
 
     .logo-center {
-        font-size: 90%;
+        width: 150px;
+        height: 70px;
     }
 
     #nav i {
@@ -299,16 +298,16 @@ footer {
     ul.large-screen li {
         display: none;
     }
-    
+
     .small-screen {
         display: block;
     }
-    
+
     .sticky-nav {
         position: relative;
         top: 0;
     }
-    
+
     .sticky-nav ul {
         display: flex;
         flex-direction: column;
@@ -338,12 +337,12 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 30px;
+        gap: 60px;
         margin-bottom: 30px;
-    
+
     }
 
-    .on_small_scrrens > li > a {
+    .on_small_scrrens>li>a {
         text-decoration: none;
         align-items: center;
         justify-content: center;
@@ -351,17 +350,17 @@ footer {
 
     .on_small_scrrens i {
         display: flex;
-        font-size: 3em;
+        font-size: 2em;
         color: var(--secondary-color);
         text-decoration: none;
-
     }
 
     .whatsap i {
         display: none;
     }
 
-    .button1, .button2 {
+    .button1,
+    .button2 {
         display: none;
     }
 
