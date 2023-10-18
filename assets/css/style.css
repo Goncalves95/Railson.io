@@ -30,12 +30,9 @@ body {
 /* header */
 header {
     width: 100%;
-    height: 100px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(255, 255, 255, 0);
-    /* ajuste a opacidade conforme necessário */
+    position: fixed;
+    background-color: transparent;
+    z-index: 10;
 }
 
 .header,
@@ -43,26 +40,23 @@ footer {
     width: 100%;
     max-width: 100%;
     display: flex;
-    padding: 0.5em 2em;
-    background-color: var(--primary-color);
+    background-color: transparent;
     color: var(--secondary-color);
-    background-color: var(--primary-color);
 }
 
 .header {
+    max-width: 1240px;
+    margin: 0 auto;
     justify-content: space-between;
-    align-items: center;
-    margin: 2 auto;
-    background-color: transparent;
 }
 
 .logo-center {
     width: 300px;
-    height: 80wpx;
+    height: 100px;
     margin: auto;
 }
 
-#social ul {
+.large-screen {
     max-width: 100%;
     display: flex;
     align-items: right;
@@ -125,7 +119,7 @@ ul {
     border-top: 1px solid var(--green-secondary-color);
     border-bottom: 1px solid var(--green-secondary-color);
     color: var(--secondary-color);
-    font-size: 1.2em;
+    font-size: 1em;
     font-family: var(--sans-font);
     padding: 1em;
     row-gap: 0.2em;
@@ -153,7 +147,7 @@ ul {
 .video-div {
     /*Ajuste a largura e altura desejadas aqui*/
     width: auto;
-    height: 1400px;
+    height: 1200px;
 
     /*isto fará o elemento video e o .container se adaptarem ao .video-div*/
     position: relative;
@@ -175,167 +169,66 @@ ul {
     width: 100%;
 }
 
-.about {
-    display: block;
-    height: 1000px;
-    background: #002bff;
-    justify-content: center;
-    align-items: center;
+.meuaudio {
     display: flex;
-    flex-direction: column;
+    position: fixed;
+    justify-content: right;
+    align-items: flex-end;
+
 }
 
-.about>h3 {
-    color: #000;
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
     width: 100%;
-    text-align: center;
+    height: 50px;
 }
 
-.cards-service {
-    background: #48ff00;
-    height: 300px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding-left: 50px;
-    padding-right: 50px;
-    gap: 100px;
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
 }
 
-.cards {
-    width: 200px;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black;
+button:hover {
+    background-color: #45a049;
 }
 
 /* Footer */
 footer {
-    justify-content: space-between;
-    align-items: center;
-    justify-items: center;
     width: 100%;
     height: 100px;
-    position: relative;
-    bottom: 0;
+    position: absolute;
     left: 0;
+    bottom: 0;
+}
+
+.footer {
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
 }
 
 .whatsap i {
-    font-size: 5em;
+    font-size: 3em;
     color: var(--secondary-color);
-    padding-left: 10px;
+    left: 10px;
+    bottom: 10px;
+    justify-content: right;
+    align-items: flex-end;
 }
 
 .whatsap i:hover {
     color: var(--green-secondary-color);
-}
-
-.a {
-    text-decoration: none;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    color: #000;
-    text-transform: uppercase;
-    font-size: 120%;
-    font-family: var(--serif-font);
-}
-
-.glow-on-hover {
-    width: 220px;
-    height: 50px;
-    border: none;
-    outline: none;
-    color: #fff;
-    cursor: pointer;
-    position: relative;
-    z-index: 0;
-    border-radius: 10px;
-}
-
-.glow-on-hover:before {
-    content: "";
-    background: linear-gradient(45deg,
-            #ff0000,
-            #ff7300,
-            #fffb00,
-            #48ff00,
-            #00ffd5,
-            #002bff,
-            #7a00ff,
-            #ff00c8,
-            #ff0000);
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    border-radius: 10px;
-}
-
-.glow-on-hover:active {
-    color: #fff;
-}
-
-.glow-on-hover:active:after {
-    background: transparent;
-}
-
-.glow-on-hover:hover:before {
-    opacity: 1;
-}
-
-.glow-on-hover:after {
-    z-index: -1;
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    left: 0;
-    top: 0;
-    border-radius: 10px;
-}
-
-@keyframes glowing {
-    0% {
-        background-position: 0 0;
-    }
-
-    50% {
-        background-position: 400% 0;
-    }
-
-    100% {
-        background-position: 0 0;
-    }
-}
-
-/* Media query */
-
-/* Large screens (large screen from 1800px and up) */
-@media only screen and (min-width: 1800px) {}
-
-/* Medium and large screens (992px and up */
-@media only screen and (min-width: 993px) {}
-
-/* Medium screens ( 992px and down) */
-@media only screen and (max-width: 992px) {
-    nav>div {
-        width: 100%;
-    }
 }
 
 /* Medium small screens (768px and up) */
@@ -360,13 +253,21 @@ footer {
 @media only screen and (min-width: 769px) {}
 
 /* Larger or lanscape phones (576px and up) */
-@media screen and (min-width: 576px) {}
+@media screen and (min-width: 576px) {
+    #toggler:checked+label>span.open {
+        display: none;
+    }
+}
 
 /* Small screens (768px and down) */
 
 @media only screen and (max-width: 768px) {
     * {
         overflow: auto;
+    }
+
+    .logo-center {
+        font-size: 90%;
     }
 
     #nav i {
@@ -383,32 +284,41 @@ footer {
     ul.large-screen li {
         display: none;
     }
-
+    
+    .small-screen {
+        display: block;
+    }
+    
     .sticky-nav {
         position: relative;
         top: 0;
     }
-
+    
     .sticky-nav ul {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    #booking {
-        max-width: 100%;
+   
+
+    #video>video {
+        display: block;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        /*apenas um -1 é necessário quando se trabalha com relative + absolute, sendo pai e filho*/
+        width: 100%;
+        height: 100%;
     }
 
-    #booking-confirmation {
-        width: 40%;
+    footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100px;
     }
 
-    .form-container form {
-        width: 96%;
-    }
 
-    .form-background {
-        background-image: url(../images/table-event-flower.avif);
-        --position: center;
-    }
+
 }
