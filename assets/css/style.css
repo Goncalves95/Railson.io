@@ -145,15 +145,8 @@ ul {
 }
 
 /* Main Page */
-.video-div {
-    /*Ajuste a largura e altura desejadas aqui*/
-    width: auto;
-    height: 1200px;
-    /*isto fará o elemento video e o .container se adaptarem ao .video-div*/
-    position: relative;
-}
 
-.video-div>#video {
+#video {
     position: absolute;
     top: 0;
     left: 0;
@@ -162,11 +155,11 @@ ul {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    object-fit: fill;
+    object-fit: cover;
     /* evita do video passar a altura desejada do .video-div */
 }
 
-.video-div>#video>video {
+.video {
     width: 100%;
 }
 
@@ -178,13 +171,16 @@ ul {
 
 }
 
-.botoes {
+#botoes {
     display: flex;
-    align-items: flex-end;
+    position: absolute;
     justify-items: center;
+    align-items: center;
+    justify-content: space-evenly;
     gap: 20px;
     width: 100%;
     height: 50px;
+    bottom: 10px;
 }
 
 button {
@@ -263,6 +259,10 @@ footer {
     ul {
         margin-right: 20px;
     }
+
+    #video {
+        object-fit: cover;
+    }
 }
 
 /* Small screens (768px and down) */
@@ -314,7 +314,7 @@ footer {
         /*apenas um -1 é necessário quando se trabalha com relative + absolute, sendo pai e filho*/
         width: 100%;
         height: 100%;
-        object-fit:contain;
+        object-fit: cover;
     }
 
     footer {

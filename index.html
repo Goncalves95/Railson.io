@@ -106,28 +106,16 @@
     <button onclick="toggleAudio()">Mostrar/Esconder Som</button>-->
 
     <!-- Main content -->
-    <div class="video-div">
-      <div id="video">
-        <video
-          id="video1"
-          autoplay
-          loop
-          muted
-          src="assets/video/black_vibe_tattoo_studio2.mp4"
-          type="video/mp4"
-        ></video>
-      </div>
-      <div class="botoes">
+    <div id="video">
+        <video class="video" id="background-video" autoplay loop muted poster="assets/video/black_vibe_tattoo_studio2.mp4">
+            <source src="assets/video/black_vibe_tattoo_studio2.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div id="botoes">
         <a href="booked.html"><button>Botão 1</button></a>
         <a href="pagina2.html"><button>Botão 2</button></a>
-        <a
-          class="whatsap"
-          href="https://wa.me/41796354399?text=Hi,%20I'd%20like%20to%20book%20a%20session."
-          rel="noopener"
-          target="whatsap"
-          ><i class="fa-brands fa-whatsapp"></i
-        ></a>
-      </div>
+        <a class="whatsap" href="https://wa.me/41796354399?text=Hi,%20I'd%20like%20to%20book%20a%20session." rel="noopener"
+            target="whatsap"><i class="fa-brands fa-whatsapp"></i></a>
     </div>
 
     <!-- Footer -->
