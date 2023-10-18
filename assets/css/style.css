@@ -132,7 +132,7 @@ ul {
 
 .collapsing-nav>ul>li a {
     text-decoration: none;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     font-family: var(--sans-font);
 }
 
@@ -282,6 +282,7 @@ footer {
     .logo-center {
         width: 150px;
         height: 70px;
+        margin-left: 20px;
     }
 
     #nav i {
