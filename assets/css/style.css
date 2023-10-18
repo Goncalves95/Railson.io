@@ -69,6 +69,7 @@ footer {
 ul {
     display: flex;
     align-content: right;
+    margin-top: 30px;
 }
 
 #social i {
