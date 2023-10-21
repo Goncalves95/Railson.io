@@ -2,12 +2,13 @@
 
 :root {
     --logo-font: "suquel", serif;
-    --serif-font: "Lexend+mega", serif;
+    --serif-font: "Lexend", serif;
     --sans-font: "Unbounded", sans-serif;
 
     --primary-color: rgb(255, 255, 255);
     --secondary-color: rgb(0, 0, 0);
     --green-secondary-color: rgb(0, 128, 0);
+    --bs-white-rgb: 255, 255, 255;
 }
 
 * {
@@ -22,7 +23,6 @@ body {
     color: var(--secondary-color);
     font-family: var(--serif-font);
     display: grid;
-    grid-template-rows: auto 1fr auto;
     flex-flow: auto;
     background-color: var(--primary-color);
 }
@@ -150,61 +150,148 @@ ul {
     display: none;
 }
 
-/* Main Page */
+/*  Main Page */
 
-
-#video {
+/*---------------------------------------
+  VIDEO              
+-----------------------------------------*/
+.video-wrap {
+    z-index: -10;
+    background-color: #000000;
+  }
+  
+  .custom-video {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
-    /*apenas um -1 é necessário quando se trabalha com relative + absolute, sendo pai e filho*/
+    object-fit: cover;
     width: 100%;
     height: 100%;
+  }
+  
+  /*---------------------------------------
+  HERO        
+  -----------------------------------------*/
+  .hero-section {
+    position: relative;
     overflow: hidden;
-    object-fit: cover;
-    /* evita do video passar a altura desejada do .video-div */
-}
+    height: calc(100vh - 51px);
+  }
+  
+  .hero-section small {
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+  
+  .hero-section .section-overlay {
+    z-index: 2;
+    opacity: 0.10;
+  }
+  
+  .hero-section .container {
+    position: relative;
+    z-index: 4;
+    height: 90vh;
+  }
 
-.video {
+  .text-center {
+    text-align: center !important;
+    font-size: 30px;
+    font-family: var(--sans-font);
+  }
+
+  .text-white {
+    --bs-text-opacity: 1;
+    color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
+  }
+
+  .row, .justify-content-center {
+        width: 100vw;
+        height: 90vh;;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center
+  }
+  
+  .hero-section .container .row {
+    height: 90%;
+  }
+
+  .text-center h1 {
+    font-family: var(--sans-font);
+  }
+  
+  /*---------------------------------------
+  SECTION               
+  -----------------------------------------*/
+  .
+  .section-padding {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  
+  .section-bg {
+    background-color:  #f0f8ff;
+  }
+  
+  .section-overlay {
+    background-color: #000000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
     width: 100%;
-}
+    height: 100%;
+    opacity: 0.35;
+  }
+  
+  .section-overlay + .container {
+    position: relative;
+  }
 
+/*
 .meuaudio {
     display: flex;
     position: fixed;
     justify-content: right;
     align-items: flex-end;
 
-}
+} 
+-------- */
 
 #botoes {
     display: flex;
     position: absolute;
     justify-items: center;
     align-items: center;
-    justify-content: space-evenly;
-    gap: 20px;
-    font-size: 80%;
+    gap: 30px;
     bottom: 10px;
 }
 
-#botoes>a>img {
-    background-color: transparent;
+.button1, .button2, .button3 {
     border: none;
-    padding: 10px 20px;
     text-align: center;
-    display: inline-block;
-    font-size: 16px;
+    display: inline-flex;
     margin: 4px 2px;
     transition-duration: 0.4s;
     cursor: pointer;
-    width: 200px;
-    height: 100px;
+    width: 100px;
+    
 }
 
-button:hover {
-    background-color: #45a049;
+#botoes img {
+    width: 100%;
+}
+
+.button1:hover , .button2:hover , .button3:hover {
+    background-color: gold;
+    border-radius: 20%;
+    opacity: 0.5;
+}
+
+.button-small-screens {
+    display: none;
 }
 
 .on_small_scrrens {
@@ -236,7 +323,7 @@ footer {
 }
 
 .whatsap i:hover {
-    color: var(--green-secondary-color);
+    color: gold;
 }
 
 /* Medium small screens (768px and up) */
@@ -333,16 +420,28 @@ footer {
         overflow: hidden;
     }
 
-    #botoes a {
-        display: none; 
+    .button-small-screens {
+        background-color: none;
+        border: none;
+        text-align: center;
+        display: none;
+        font-size: 10px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        width: 100px;
+    }
+
+    .button-small-screens img {
+        width: 100%;
     }
 
     .on_small_scrrens {
         display: flex;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         gap: 60px;
-        margin-bottom: 30px;
 
     }
 
@@ -354,9 +453,14 @@ footer {
 
     .on_small_scrrens i {
         display: flex;
-        font-size: 2em;
+        font-size: 2.5em;
         color: var(--secondary-color);
         text-decoration: none;
+        gap: 60px;
+    }
+
+    .on_small_scrrens i:hover {
+        color: gold;
     }
 
     .whatsap i {
