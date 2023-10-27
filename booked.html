@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Railson.io</title>
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/user.css">
+    <link rel="stylesheet" href="assets/css/user.css">
   </head>
   <body>
     <!-- Header -->
@@ -83,33 +83,106 @@
                 >Tattoo Collection</a
               >
             </li>
-            <li>
-              <a
-                href="https://www.youtube.com/"
-                aria-label="Find us on Youtube (opens in new tab)"
-                rel="noopener"
-                target="youtube"
-                >Tattoo Care</a
-              >
-            </li>
           </ul>
         </nav>
       </div>
     </header>
 
     <!-- Main content -->
-    
+    <div class="container-contact100">
+      <div class="wrap-contact100">
+      <form class="contact100-form validate-form">
+      <span class="contact100-form-title">
+      Get in Touch
+      </span>
+      <div class="wrap-input100 validate-input" data-validate="Name is required">
+      <input class="input100" id="name" type="text" name="name" placeholder="Name">
+      <label class="label-input100" for="name">
+      <span class="lnr lnr-user"></span>
+      </label>
+      </div>
+      <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+      <input class="input100" id="email" type="text" name="email" placeholder="Email">
+      <label class="label-input100" for="email">
+      <span class="lnr lnr-envelope"></span>
+      </label>
+      </div>
+      <div class="wrap-input100 validate-input" data-validate="Phone is required">
+      <input class="input100" id="phone" type="text" name="phone" placeholder="Phone">
+      <label class="label-input100" for="phone">
+      <span class="lnr lnr-phone-handset"></span>
+      </label>
+      </div>
+      <div class="wrap-input100 validate-input" data-validate="Message is required">
+      <textarea class="input100" name="message" placeholder="Your message..."></textarea>
+      </div>
+      <div class="contact100-form-checkbox">
+      <input class="input-checkbox100" id="ckb1" type="checkbox" name="copy-mail">
+      <label class="label-checkbox100" for="ckb1">
+      Send copy to my-email
+      </label>
+      </div>
+      <div class="container-contact100-form-btn">
+      <div class="wrap-contact100-form-btn">
+      <div class="contact100-form-bgbtn"></div>
+      <button class="contact100-form-btn">
+      Send Email
+      </button>
+      </div>
+      </div>
+      </form>
+      </div>
+      </div>
+      <div id="dropDownSelect1"></div>
+      
+      <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+      
+      <script src="vendor/animsition/js/animsition.min.js"></script>
+      
+      <script src="vendor/bootstrap/js/popper.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+      
+      <script src="vendor/select2/select2.min.js"></script>
+      
+      <script src="vendor/daterangepicker/moment.min.js"></script>
+      <script src="vendor/daterangepicker/daterangepicker.js"></script>
+      
+      <script src="vendor/countdowntime/countdowntime.js"></script>
+      
+      <script src="js/main.js"></script>
+      
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+      
+        gtag('config', 'UA-23581568-13');
+      </script>
+      <script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon="{&quot;rayId&quot;:&quot;81cd1e116d5b5274&quot;,&quot;version&quot;:&quot;2023.10.0&quot;,&quot;token&quot;:&quot;cd0b4b3a733644fc843ef0b185f98241&quot;}" crossorigin="anonymous"></script>
+      
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="copy">Railson.io 2023. All rights reserved.</div>
-        <div class="sub-menu"><img src="" alt="Fernando Gonçalves logo"></div>
-        <button class="glow-on-hover" type="button" role="link" href="booked.html">
-            <a href="index.html" class="a">Home Page</a>
-        </button>
-        <div class="whatsap"><a href="https://wa.me/41796354399?text=Hi,%20I'd%20like%20to%20book%20a%20session."
-                rel="noopener" target="whatsap"><i class="fa-brands fa-whatsapp"></i></a></div>
-    </footer>
+  </div>
+</div>
+<div id="botoes">
+  <ul class="on_small_scrrens">
+      <li>
+          <a href="https://www.instagram.com/railson.io/" aria-label="Find us on Instagram (opens in new tab)" rel="noopener"
+              target="instagram"><i class="fa-brands fa-instagram"></i></a>
+      </li>
+      <li>
+          <a href="https://www.tiktok.com/@railson.io" aria-label="Find us on Tiktok (opens in new tab)" rel="noopener"
+              target="tiktok"><i class="fa-brands fa-tiktok"></i></a>
+      </li>
+      <li>
+          <a href="https://www.youtube.com/" aria-label="Find us on Youtube (opens in new tab)" rel="noopener"
+              target="youtube"><i class="fa-brands fa-youtube"></i></a>
+      </li>
+      <li><a href="https://wa.me/41796354399?text=Hi,%20I'd%20like%20to%20book%20a%20session." rel="noopener"
+          target="whatsap"><i class="fa-brands fa-whatsapp"></i></a></li>
+  </ul>
+</div>
     <!-- Script always in the end of the page -->
     <script src="https://kit.fontawesome.com/049d55f482.js" crossorigin="anonymous" defer></script>
     <script src="script.js"></script>
