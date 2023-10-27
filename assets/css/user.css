@@ -200,6 +200,11 @@ label {
     line-height: 1.2;
 }
 
+.contact100-form-btn a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
 button {
     outline: none !important;
     border: none;

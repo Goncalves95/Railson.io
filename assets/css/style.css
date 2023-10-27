@@ -117,13 +117,12 @@ ul {
     justify-content: center;
     align-items: center;
     text-align: center;
-    border-top: 1px solid var(--green-secondary-color);
-    border-bottom: 1px solid var(--green-secondary-color);
     color: var(--secondary-color);
     font-size: 1em;
     font-family: var(--sans-font);
     padding: 1em;
     row-gap: 0.2em;
+    background-color: var(--primary-color);
 }
 
 .collapsing-nav>ul li {
@@ -132,7 +131,7 @@ ul {
 
 .collapsing-nav>ul>li a {
     text-decoration: none;
-    color: var(--);
+    color: var(--secondary-color);
     font-family: var(--sans-font);
 }
 
