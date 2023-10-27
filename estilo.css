@@ -1,0 +1,325 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 13px;
+    height: 100%;
+    text-align: center;
+    background: #292929;
+    color: #000;
+    font-family: 'Mukta', sans-serif;
+}
+
+/* -------------- MAIN SECTION -------------*/
+#main {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 1;
+}
+
+/* -------------- HEADER SECTION -------------*/
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80px;
+    bottom: 0;
+    z-index: 20;
+    background: #292929;
+    -webkit-transform: translate3d(0,0,0);
+}
+
+.main-header:before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    width: 60px;
+    height: 1px;
+    bottom: 180px;
+    background: rgba(255,255,255,0.1);
+}
+
+.logo-holder {
+    position: absolute;
+    top: 50px;
+    left: 15px;
+    z-index: 5;
+}
+
+a {
+    text-decoration: none;
+    position: relative;
+    color: #000;
+}
+
+.logo-holder img {
+    width: 50px;
+    height: 50px;
+}
+
+img {
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+    vertical-align: middle;
+}
+
+.nav-button {
+    width: 28px;
+    height: 50px;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    top: 200px;
+}
+
+.nav-button span {
+    width: 100%;
+    float: left;
+    margin-bottom: 6px;
+    height: 2px;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+}
+
+.color-bg, .header-contacts li:before, .top-header:after, .header-social:before, .section-title:before, .line-item:first-child:before, .line-item:last-child:before, #twitts-container ul li:before, .main-about h2:before, .hs_init .swiper-scrollbar-drag, .page-scroll-nav li a.act-scrlink:before, .resum-header:before, .custom-skillbar, .half-bg-title:before, .parallax-text h3:before, .content-inner .cf-inner .inner h2:before, .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main, .nav-button span, .folio-btn-dot:before, .page-scroll-nav li a.actscr-link:before, .fixed-column-tilte:before, .arrowpagenav:before, .page-scroll-nav:after, .order-wrap h3:before, .hero-slider-wrap_pagination .swiper-pagination-bullet.swiper-pagination-bullet-active:before, .half-hero-wrap h1:before, .scroller, .section-separator span:after, .page-load_bg span:before, .video-promo-text h3:before, .dec-img:before, .filter-panel .folio-counter:after, .grid-item-holder:hover .grid-det:before, .single-page-title:before, .inline-folio-filters .folio-counter:after, .map-container:before, .fixed-top-panel .scroll-down-wrap:before, .back-to-home-btn:before, .accordion a.toggle span:before, .accordion a.toggle span:after, .fw-carousel_pagination .swiper-pagination-bullet:before, .pagination a.current-page, .ss-slider-pagination .swiper-pagination-bullet:before, .section-entry h1:before, .fcb:hover, .ss-slider-cont:hover, .tcb:hover, .vc-section button, .vc-section input[type=submit], .woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {
+    background: #F68338;
+}
+
+.nav-button span:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: #fff;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-button .ncs {
+    width: 70%;
+}
+
+.nav-button .nbs, .nav-button.cmenu:hover .nbs {
+    width: 100%;
+}
+
+.menu-button-text {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: -1px;
+    color: rgba(255, 255, 255, 0.41);
+    font-size: 10px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.header-social {
+    position: absolute;
+    bottom: 80px;
+    width: 100%;
+    right: 0;
+    z-index: 20;
+    padding: 20px 0;
+    background: #383838;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+.header-social li a {
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    display: inline-block;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.41);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 300ms linear;
+}
+
+.folio-btn {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    bottom: 0;
+    height: 80px;
+    background: #343434;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.folio-btn-item {
+    position: absolute;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    top: 20px;
+}
+
+.folio-btn-dot {
+    float: left;
+    width: 33.3%;
+    height: 33.3%;
+    position: relative;
+}
+
+.folio-btn-tooltip {
+    position: absolute;
+    height: 80px;
+    line-height: 80px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    top: 20px;
+    left: 100%;
+    width: 190px;
+    background: #292929;
+    border-left: 1px solid rgba(255,255,255,0.1);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 300ms linear;
+}
+
+
+
+
+
+
+/* -------------- HERO SECTION -------------*/
+
+.video-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 0;
+    z-index: -1;
+}
+
+
+overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.4;
+    z-index: 3;
+}
+
+.hidden-section {
+    overflow: hidden;
+}
+
+.hero-wrap, .fs-slider-wrap {
+    background: #292929;
+    z-index: 25;
+}
+
+.full-height {
+    height: 100%;
+}
+
+.fl-wrap {
+    float: left;
+    width: 100%;
+    position: relative;
+}
+
+div {
+    display: block;
+}
+
+.half-hero-wrap {
+    position: absolute;
+    left: 15%;
+    z-index: 10;
+    top: 29%;
+}
+
+.hb-top {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 10px;
+}
+
+.hero-border {
+    position: absolute;
+    background: #292929;
+    z-index: 4;
+}
+
+.hb-bottom {
+    bottom: 0;
+    height: 10px;
+    width: 100%;
+    left: 0;
+}
+
+.hero-border {
+    position: absolute;
+    background: #292929;
+    z-index: 4;
+}
+
+.hb-right {
+    height: 100%;
+    width: 10px;
+    top: 0;
+    right: 0;
+}
+
+.hero-border {
+    position: absolute;
+    background: #292929;
+    z-index: 4;
+}
+
+
+.hero-corner {
+    top: 50px;
+    right: 50px;
+    z-index: 21;
+    border-top: 1px solid;
+    border-right: 1px solid;
+}
+
+.bot-element, .hiddec-anim {
+    transform: translateX(-50px);
+    opacity: 0;
+}
+
+.hero-corner, .hero-corner2, .hero-corner3 {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    z-index: 21;
+    border-color: rgba(255,255,255,0.3);
+}
+.hero-corner2 {
+    top: 50px;
+    left: 50px;
+    border-top: 1px solid;
+    border-left: 1px solid;
+}
+
+

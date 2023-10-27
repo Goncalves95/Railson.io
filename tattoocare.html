@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Railson.io</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/user.css">
+  </head>
+  <body>
+    <!-- Header -->
+
+    <header>
+      <div class="header">
+        <div id="logo">
+        <a href="index.html" aria-label="logo, go to the Home page"><img
+            src="assets/images/railson_sem_tattoo.png"
+            class="logo-center"
+            alt="Railson.io"
+          />
+          </a>
+        </div>
+
+        <!-- Nav bar for medium and large screens -->
+        <div id="social">
+          <ul class="large-screen">
+            <li>
+              <a
+                href="https://www.instagram.com/railson.io/"
+                aria-label="Find us on Instagram (opens in new tab)"
+                rel="noopener"
+                target="instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.tiktok.com/@railson.io"
+                aria-label="Find us on Tiktok (opens in new tab)"
+                rel="noopener"
+                target="tiktok"
+                ><i class="fa-brands fa-tiktok"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/"
+                aria-label="Find us on Youtube (opens in new tab)"
+                rel="noopener"
+                target="youtube"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Nav bar for small screens (dropdown) -->
+      <div>
+        <input type="checkbox" id="toggler" name="toggler" />
+        <label for="toggler" class="toggle-menu small-screen">
+          <span class="open"><i class="fa-solid fa-bars"></i></span>
+          <span class="close"><i class="fa-solid fa-x"></i></span>
+        </label>
+        <nav class="collapsing-nav">
+          <ul>
+            <li>
+              <a
+                href="https://www.instagram.com/railson.io/"
+                aria-label="Find us on Instagram (opens in new tab)"
+                rel="noopener"
+                target="instagram"
+                >Book Now</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.tiktok.com/@railson.io"
+                aria-label="Find us on Tiktok (opens in new tab)"
+                rel="noopener"
+                target="tiktok"
+                >Tattoo Collection</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/"
+                aria-label="Find us on Youtube (opens in new tab)"
+                rel="noopener"
+                target="youtube"
+                >Tattoo Care</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- <audio
+      id="meuAudio"
+      controls
+      loop>
+      <source src="caminho/do/seu/audio.mp3" type="audio/mp3" />
+      Seu navegador não suporta o elemento de áudio.
+    </audio> 
+
+    <button onclick="toggleAudio()">Mostrar/Esconder Som</button>-->
+
+    <!-- Main content -->
+     <!-- HeroImage-->
+     <section class="hero-section" id="section_1">
+      <div class="section-overlay"></div>
+
+      <div class="container justify-content-center align-items-center">
+          <div class="row">
+
+              <div class="col-12 mt-auto mb-5 text-center">
+                  <small>Wellcome</small>
+
+                  <a class="button-small-screens" href="booked.html"><img src="assets/images/book_now.png" alt="Book Now"></a>
+              </div>
+                  </div>
+                  <div id="botoes">
+                    <a class="button1" href="booked.html"><img src="assets/images/book_now.png" alt="Book Now"></a>
+                    <a class="button2" href="pagina2.html"><img src="assets/images/collection.png" alt="Collection"></a>
+                    <a class="button3" href="pagina3.html"><img src="assets/images/tattoo_care.png" alt="Tattoo Care"></a>
+                    <!-- <a class="whatsap" href="https://wa.me/41796354399?text=Hi,%20I'd%20like%20to%20book%20a%20session." rel="noopener"
+                        target="whatsap"><i class="fa-brands fa-whatsapp"></i></a> -->
+                    <ul class="on_small_scrrens">
+                        <li>
+                            <a href="https://www.instagram.com/railson.io/" aria-label="Find us on Instagram (opens in new tab)" rel="noopener"
+                                target="instagram"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.tiktok.com/@railson.io" aria-label="Find us on Tiktok (opens in new tab)" rel="noopener"
+                                target="tiktok"><i class="fa-brands fa-tiktok"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/" aria-label="Find us on Youtube (opens in new tab)" rel="noopener"
+                                target="youtube"><i class="fa-brands fa-youtube"></i></a>
+                        </li>
+                        <li><a href="https://wa.me/41796354399?text=Hi,%20I'd%20like%20to%20book%20a%20session." rel="noopener"
+                            target="whatsap"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    </ul>
+                </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="video-wrap">
+          <video autoplay="" loop="" muted="" class="custom-video" poster="">
+              <source src="/assets/video/capa_official_railson-io.mp4" type="video/mp4">
+
+              Your browser does not support the video tag.
+          </video>
+      </div>
+  </section>
+     <!--<div id="video" style="background:url(//prium.github.io/nirvana/assets/images/yt-video-full.jpg") 0% 0% / cover no-repeat;">
+       <video class="video" id="background-video" autoplay loop muted poster="assets/video/corredor_luzes.mp4">
+            <source src="assets/video/corredor_luzes.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div id="apresentaction">
+        <h1 class="bighead">Wellcome</h1>
+        <h3 class="smallhead">to my page</h3>
+    </div> 
+    <div id="botoes">
+        <a class="button1" href="booked.html"><button><img src="assets/images/book_now.png" alt="Book Now"></button></a>
+        <a class="button2" href="pagina2.html"><button><img src="assets/images/collection.png" alt="Collection"></button></a>
+        <a class="button3" href="pagina3.html"><button><img src="assets/images/tattoo_care.png" alt="Tattoo Care"></button></a>
+        <a class="whatsap" href="https://wa.me/41796354399?text=Hi,%20I'd%20like%20to%20book%20a%20session." rel="noopener"
+            target="whatsap"><i class="fa-brands fa-whatsapp"></i></a>
+        <ul class="on_small_scrrens">
+            <li>
+                <a href="https://www.instagram.com/railson.io/" aria-label="Find us on Instagram (opens in new tab)" rel="noopener"
+                    target="instagram"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li>
+                <a href="https://www.tiktok.com/@railson.io" aria-label="Find us on Tiktok (opens in new tab)" rel="noopener"
+                    target="tiktok"><i class="fa-brands fa-tiktok"></i></a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/" aria-label="Find us on Youtube (opens in new tab)" rel="noopener"
+                    target="youtube"><i class="fa-brands fa-youtube"></i></a>
+            </li>
+            <li><a href="https://wa.me/41796354399?text=Hi,%20I'd%20like%20to%20book%20a%20session." rel="noopener"
+                target="whatsap"><i class="fa-brands fa-whatsapp"></i></a></li>
+        </ul>
+    </div>-->
+
+    <!-- Footer -->
+
+    <!-- Script always in the end of the page -->
+    <script
+      src="https://kit.fontawesome.com/049d55f482.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
