@@ -194,7 +194,7 @@ ul {
 .hero-section {
     position: relative;
     overflow: hidden;
-    height: calc(100vh - 51px);
+    height: calc(100vh - 0px);
 }
 
 .hero-section small {

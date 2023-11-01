@@ -51,6 +51,7 @@
 .validate-input {
     position: relative;
 }
+
 .wrap-input100 {
     width: 100%;
     position: relative;
@@ -62,6 +63,7 @@ input.input100 {
     height: 62px;
     padding: 0 20px 0 58px;
 }
+
 .input100 {
     display: block;
     width: 100%;
@@ -72,15 +74,22 @@ input.input100 {
     line-height: 1.2;
     padding: 0 5px;
 }
+
 input {
     outline: none;
     border: none;
 }
 
-button, input {
+button,
+input {
     overflow: visible;
 }
-button, input, optgroup, select, textarea {
+
+button,
+input,
+optgroup,
+select,
+textarea {
     margin: 0;
     font-family: inherit;
     font-size: inherit;
@@ -104,6 +113,7 @@ button, input, optgroup, select, textarea {
     font-size: 18px;
     color: #999999;
 }
+
 label {
     display: inline-block;
     margin-bottom: 0.5rem;
@@ -183,6 +193,7 @@ label {
     -moz-transition: all 0.4s;
     transition: all 0.4s;
 }
+
 .contact100-form-btn {
     display: -webkit-box;
     display: -webkit-flex;
@@ -210,18 +221,26 @@ button {
     border: none;
     background: transparent;
 }
-[type=reset], [type=submit], button, html [type=button] {
+
+[type=reset],
+[type=submit],
+button,
+html [type=button] {
     -webkit-appearance: button;
 }
 
-button, select {
+button,
+select {
     text-transform: none;
 }
-button, input {
+
+button,
+G input {
     overflow: visible;
 }
-button, input, optgroup, select, textarea {
-    margin: 0;
+
+button,
+input {
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
@@ -233,3 +252,45 @@ button, input, optgroup, select, textarea {
     object-fit: contain;
 }
 
+/* Gallery */
+
+.gallery {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: rotate 35s linear infinite;
+    display: block;
+    /* Necessário para o margin funcionar */
+    margin-left: auto;
+    /* aqui */
+    margin-right: auto;
+    /* e aqui */
+    margin-top: 400px;
+}
+
+@keyframes rotate {
+    from {
+        transform: perspective(1200px) rotateY(0deg);
+    }
+
+    to {
+        transform: perspective(1200px) rotateY(360deg);
+    }
+}
+
+.gallery span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(380px);
+}
+
+.gallery span img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
