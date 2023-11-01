@@ -164,97 +164,98 @@ ul {
     background-position: center;
     z-index: -1;
     overflow: hidden;
-    will-change: transform,opacity,filter;
+    will-change: transform, opacity, filter;
     backface-visibility: hidden;
     background-repeat: no-repeat;
-  }
-  
-  .custom-video {
+}
+
+.custom-video {
     position: absolute;
     top: 0;
     left: 0;
     object-fit: cover;
     width: 100%;
     height: 100%;
-  }
+}
 
-  @media (max-width: 0px) {
-      .fullscreen {
-          background: url('gif.mp4') center center / cover no-repeat;
-      }
+@media (max-width: 0px) {
+    .fullscreen {
+        background: url('gif.mp4') center center / cover no-repeat;
+    }
 
-      .fullscreen-vd {
-          display: none;
-      }
-  }
-  
-  /*---------------------------------------
+    .fullscreen-vd {
+        display: none;
+    }
+}
+
+/*---------------------------------------
   HERO        
   -----------------------------------------*/
-  .hero-section {
+.hero-section {
     position: relative;
     overflow: hidden;
     height: calc(100vh - 51px);
-  }
-  
-  .hero-section small {
+}
+
+.hero-section small {
     color: #ffffff;
     text-transform: uppercase;
-  }
-  
-  .hero-section .section-overlay {
+}
+
+.hero-section .section-overlay {
     z-index: 2;
     opacity: 0.10;
-  }
-  
-  .hero-section .container {
+}
+
+.hero-section .container {
     position: relative;
     z-index: 4;
     height: 90vh;
-  }
+}
 
-  .text-center {
+.text-center {
     text-align: center !important;
     font-size: 30px;
     font-family: var(--sans-font);
-  }
+}
 
-  .text-white {
+.text-white {
     --bs-text-opacity: 1;
     color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
-  }
+}
 
-  .row, .justify-content-center {
-        width: 100vw;
-        height: 90vh;;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center
-  }
-  
-  .hero-section .container .row {
+.row,
+.justify-content-center {
+    width: 100vw;
+    height: 90vh;
+    ;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+}
+
+.hero-section .container .row {
     height: 90%;
-  }
+}
 
-  .text-center h1 {
+.text-center h1 {
     font-family: var(--sans-font);
-  }
-  
-  /*---------------------------------------
+}
+
+/*---------------------------------------
   SECTION               
   -----------------------------------------*/
-  .
-  .section-padding {
+. .section-padding {
     padding-top: 100px;
     padding-bottom: 100px;
-  }
-  
-  .section-bg {
-    background-color:  #f0f8ff;
-  }
-  
-  .section-overlay {
+}
+
+.section-bg {
+    background-color: #f0f8ff;
+}
+
+.section-overlay {
     background-color: #000000;
     position: absolute;
     top: 0;
@@ -263,11 +264,11 @@ ul {
     width: 100%;
     height: 100%;
     opacity: 0.35;
-  }
-  
-  .section-overlay + .container {
+}
+
+.section-overlay+.container {
     position: relative;
-  }
+}
 
 /*
 .meuaudio {
@@ -288,7 +289,9 @@ ul {
     bottom: 10px;
 }
 
-.button1, .button2, .button3 {
+.button1,
+.button2,
+.button3 {
     border: none;
     text-align: center;
     display: inline-flex;
@@ -296,14 +299,16 @@ ul {
     transition-duration: 0.4s;
     cursor: pointer;
     width: 100px;
-    
+
 }
 
 #botoes img {
     width: 100%;
 }
 
-.button1:hover , .button2:hover , .button3:hover {
+.button1:hover,
+.button2:hover,
+.button3:hover {
     background-color: gold;
     border-radius: 20%;
     opacity: 0.5;
@@ -424,7 +429,7 @@ footer {
         text-align: center !important;
         font-size: 20px;
         font-family: var(--sans-font);
-      }
+    }
 
     #video>video {
         display: block;
@@ -494,7 +499,8 @@ footer {
     }
 
     .button1,
-    .button2, .button3 {
+    .button2,
+    .button3 {
         display: none;
     }
 
@@ -503,6 +509,16 @@ footer {
         bottom: 0;
         width: 100%;
         height: 100px;
+    }
+
+    .contact100-form-title {
+        display: block;
+        font-family: var(--sans-font);
+        font-size: 20px;
+        color: #43383e;
+        line-height: 1.2;
+        text-align: left;
+        padding-bottom: 35px;
     }
 
 
