@@ -110,8 +110,7 @@
             <button
                 class="flex items-baseline flex-col z-[2] border border-black/10 font-medium px-4 py-2 text-xl font-semibold select-none transition-all rounded-md no-underline text-gray-800 hover:border-gray-300"
                 @click="open = true; document.body.style.overflow='hidden'">
-                <p>Need help?</p>
-                <span class="text-lg font-normal text-black/50">Inform or ask us anything.</span>
+                <p>Let's talk</p>
             </button>
             <div class="glass z-10 fixed w-full h-full flex left-0 top-0 items-center justify-center" x-cloak
                 x-show="open">
@@ -119,11 +118,11 @@
                     <div class="rounded-lg border border-black/10 p-6 w-full bg-white max-w-[550px]"
                         @click.away="open = false; document.body.style.overflow='auto'">
                         <div class="flex items-center justify-between">
-                            <h3 class="text-gray-800 font-semibold">Contact Ticket</h3>
+                            <h3 class="text-gray-800 font-semibold">Contact Ticket </h3>
                             <button @click="open = false; document.body.style.overflow='auto'"
                                 class="text-xs border border-transparent select-none transition-all w-[25px] h-[25px] flex items-center justify-center rounded-md no-underline hover:border-gray-300 text-gray-800">✕</button>
                         </div>
-                        <p class="text-gray-800/50 text-[11px] pr-8 mb-6">Is there a problem, or is it just a question?
+                        <p class="text-gray-800/50 text-[11px] pr-8 mb-6">Book your new TATTOO, or is it just a question?
                             You can inform or ask
                             us
                             anything.</p>
@@ -136,7 +135,7 @@
                                             class="hidden peer">
                                         <label for="question"
                                             class="inline-block select-none text-xs bg-white border border-black/10 px-2 py-1 transition-all rounded-md min-w-[90px] text-center cursor-pointer hover:border-gray-300 peer-checked:border-black/60 peer-checked:bg-gray-100">
-                                            Question
+                                            Book Tattoo
                                         </label>
                                     </div>
                                     <div>
@@ -152,13 +151,24 @@
                                             class="hidden peer">
                                         <label for="issue"
                                             class="inline-block select-none text-xs bg-white border border-black/10 px-2 py-1 transition-all rounded-md min-w-[90px] text-center cursor-pointer hover:border-gray-300 peer-checked:border-black/60 peer-checked:bg-gray-100">
-                                            Issue
+                                            Question
                                         </label>
                                     </div>
                                 </div>
                             </div>
                             <div class="relative">
-                                <textarea
+                              <div class="fcf-form-group">
+                                <div class="fcf-input-group">
+                                    <input placeholder="Your name" type="text" id="Name" name="Name" class="fcf-form-control" required>
+                                </div>
+                            </div>
+                    
+                            <div class="fcf-form-group">
+                                <div class="fcf-input-group">
+                                    <input placeholder="Your email" type="email" id="Email" name="Email" class="fcf-form-control" required>
+                                </div>
+                            </div>
+                                    <textarea
                                     class="hover:cursor-pointer focus:cursor-auto rounded-lg w-full mt-2 mb-2 text-sm transition-all resize-none outline-none border border-gray-100 hover:border-gray-300 p-2.5"
                                     placeholder="Your message" name="message" id="" cols="30" rows="5"></textarea>
                                 <div class="upload-container flex items-center justify-between w-full">
@@ -200,15 +210,12 @@
                             <div class="w-form-fail border border-black/10 bg-red-200 text-xs w-fit p-2 rounded-lg mt-2 max-w-[260px]"
                                 style="display: none;">
                                 <p class="font-semibold mb-1">Error</p>
-                                <p>Please copy your Form ID from getform.io and paste it to <span
-                                        class="font-semibold">formId</span> on JavaScript. Getform > Settings > Setup >
-                                    Form Endpoint</p>
                             </div>
                             <div class="flex items-end justify-between mt-4">
                               
                                 <button
                                     class="text-sm border select-none transition-all px-4 py-1.5 rounded-md no-underline hover:border-gray-300 text-gray-800 select-none w-fit font-normal border border-black/10"
-                                    type="submit">Send your ticket</button>
+                                    type="submit">Send your mensage</button>
                             </div>
                         </form>
                     </div>
