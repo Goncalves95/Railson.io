@@ -112,14 +112,7 @@ ul {
     align-content: center;
 }
 
-.close {
-    display: none;
-}
 
-.close i {
-    color: #000000;
-    width: 100%;
-}
 
 .collapsing-nav {
     display: none;
@@ -283,17 +276,42 @@ nav >li> a {
 
 .toggle-overlay {
 	padding: 20px;
+    height: 85px;
+    width: 85px;
     position: fixed;
     bottom: 150px;
 	background: transparent;
 	border: 0px solid rgba(255, 255, 255, .4);
-	color: gray;
+	color: black;
 	border-radius: 8px;
+    font-size: 3em ;
 	transition: all .5s ease;
+}
+.close span, .close span:before, .close span:after {
+    border-radius: 4px;
+    height: 5px;
+    width: 35px;
+    background: black;
+    position: absolute;
+    display: block;
+    content: "";
+}
+
+aside {
+    display: block;
+}
+
+.outer-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 85px;
+    height: 85px;
+    cursor: pointer;
 }
 
 .toggle-overlay:hover {
-    border: 0px solid rgba(255, 255, 255, 1);
+    border: 0px solid rgba(0, 0, 0, 1);
 }
 
 .close {
@@ -306,36 +324,12 @@ nav >li> a {
     
 }
 
-span,
-span:before,
-span:after {
-        border-radius: 4px;
-        height: 5px;
-        width: 35px;
-        background: black;
-        position: absolute;
-        display: block;
-        content: '';
-}
-
-span {
-        background: black;
-}
-
-span:before {
-        transform: rotate(45deg);
-}
-
-span:after {
-        transform: rotate(-45deg);
-}
-
 .outer-close {
     position: absolute;
     right: 0;
     top: 20px;
-    width: 60px;
-    height: 60px;
+    width: 85px;
+    height: 85px;
     cursor: pointer;
 }
 /* finish new navbar*/
