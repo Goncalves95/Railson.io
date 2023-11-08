@@ -57,33 +57,6 @@
       </div>
 
       <!-- Nav bar for small screens (dropdown) -->
-      <div>
-        <input type="checkbox" id="toggler" name="toggler" />
-        <label for="toggler" class="toggle-menu small-screen">
-          <span class="open"><i class="fa-solid fa-bars"></i></span>
-          <span class="close"><i class="fa-solid fa-x"></i></span>
-        </label>
-        <nav class="collapsing-nav">
-          <ul>
-            <li>
-              <a
-                href="booked.html"
-                aria-label="Booked page"
-                target="Booked Now"
-                >Book Now</a
-              >
-            </li>
-            <li>
-              <a
-                href="gallery.html"
-                aria-label="Gallery page"
-                target="Tattoo Colection"
-                >Tattoo Collection</a
-              >
-            </li>
-          </ul>
-        </nav>
-      </div>
     </header>
 
     <!-- Main content -->
@@ -127,7 +100,7 @@
                             us
                             anything.</p>
                         <p></p>
-                        <form id="form" class="mt-2 mb-0">
+                        <form id="form" action="envia_fale.php" method="post" name="form" class="mt-2 mb-0">
                             <div class="">
                                 <div class="rounded-lg m-0 w-fit flex items-center gap-1">
                                     <div>
@@ -159,13 +132,13 @@
                             <div class="relative">
                               <div class="fcf-form-group">
                                 <div class="fcf-input-group">
-                                    <input placeholder="Your name" type="text" id="Name" name="Name" class="fcf-form-control" required>
+                                    <input placeholder="Your name" type="text" id="Name" name="name" class="fcf-form-control" required>
                                 </div>
                             </div>
                     
                             <div class="fcf-form-group">
                                 <div class="fcf-input-group">
-                                    <input placeholder="Your email" type="email" id="Email" name="Email" class="fcf-form-control" required>
+                                    <input placeholder="Your email" type="email" id="Email" name="email" class="fcf-form-control" required>
                                 </div>
                             </div>
                                     <textarea
@@ -234,11 +207,11 @@
       </li>
       <li>
           <a href="https://www.tiktok.com/@railson.io" aria-label="Find us on Tiktok (opens in new tab)" rel="noopener"
-              target="tiktok"><i class="fa-brands fa-tiktok"></i></a>
+              target="tiktok"><i class='bx bxl-tiktok'></i></a>
       </li>
       <li>
           <a href="https://www.youtube.com/" aria-label="Find us on Youtube (opens in new tab)" rel="noopener"
-              target="youtube"><i class="fa-brands fa-youtube"></i></a>
+              target="youtube"><img src="assets/images/youtube.svg" alt="youtube"></a>
       </li>
       <li><a href="https://wa.me/41796354399?text=Hi,%20I'd%20like%20to%20book%20a%20session." rel="noopener"
           target="whatsap"><i class="fa-brands fa-whatsapp"></i></a></li>
@@ -246,6 +219,7 @@
 </div>
     <!-- Script always in the end of the page -->
     <script src="https://kit.fontawesome.com/049d55f482.js" crossorigin="anonymous" defer></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="script.js"></script>
     <script src="insta.js"></script>
 </body>

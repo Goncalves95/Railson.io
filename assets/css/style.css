@@ -101,8 +101,8 @@ ul {
     width: fit-content;
 }
 
-#toggler+label {
-    font-size: 2em;
+#toggler {
+    font-size: 1em;
     color: var(--secondary-color);
     position: absolute;
     cursor: pointer;
@@ -139,6 +139,7 @@ ul {
     z-index:1;
     opacity:0;
     cursor:pointer;
+    font-size: 2em;
 }
 
 .menu-toggler:hover{
@@ -170,6 +171,7 @@ ul {
   left: 0;
   right: 0;
   margin: auto;
+  overflow: hidden;
 }
 .menu-toggler + label:before,
 .menu-toggler + label:after {
@@ -280,7 +282,7 @@ nav >li> a {
 }
 
 .toggle-overlay {
-	padding: 15px 40px;
+	padding: 20px;
     position: fixed;
     bottom: 150px;
 	background: transparent;
@@ -651,29 +653,7 @@ span:after {
 /*---------------------------------------
   SECTION               
   -----------------------------------------*/
-.section-padding {
-    padding-top: 100px;
-    padding-bottom: 100px;
-}
 
-.section-bg {
-    background-color: #f0f8ff;
-}
-
-.section-overlay {
-    background-color: #000000;
-    position: absolute;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    width: 100%;
-    height: 100%;
-    opacity: 0.35;
-}
-
-.section-overlay+.container {
-    position: relative;
-}
 
 /*
 .meuaudio {
@@ -790,9 +770,6 @@ footer {
 /* Small screens (768px and down) */
 
 @media only screen and (max-width: 768px) {
-    * {
-        overflow: auto;
-    }
 
     .logo-center {
         width: 150px;
@@ -892,10 +869,6 @@ footer {
         color: rgba(0,0,0,0.7);
         text-decoration: none;
         gap: 50px;
-    }
-
-    .on_small_scrrens i:hover {
-        color: gold;
     }
 
     .whatsap i {
