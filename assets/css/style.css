@@ -116,6 +116,11 @@ ul {
     display: none;
 }
 
+.close i {
+    color: #000000;
+    width: 100%;
+}
+
 .collapsing-nav {
     display: none;
 }
@@ -144,7 +149,7 @@ ul {
   background: transparent;
 }
 
-.menu-toggler:checked,{
+.menu-toggler:checked{
   top:0;
   width:40px;
   transform-origin: 50% 50%;
@@ -202,7 +207,7 @@ aside {
 	height: 100%;
 	bottom: 0px;
 	left: 0;
-	background: linear-gradient(200deg, white, grey, orange);
+	background: linear-gradient(370deg, gray, white);
 	opacity: 0;
 	visibility: hidden;
 	transition: all .5s ease;
@@ -234,16 +239,20 @@ nav li {
     line-height: 10vh;
 }
 
+nav >li> a {
+    color: black;
+}
+
 .menu a {
     font-size: 1.5em;
     transition: all 0.5s ease;
     display: block;
     text-decoration: none;
-    color: rgba(255, 255, 255, .5);
+    color: black;
 }
 
 .menu a:hover:before {
-    color: rgba(255, 255, 255, .9);
+    color: white;
     transform: scale(1.1);
     &:before {
         visibility: visible;
@@ -276,7 +285,7 @@ nav li {
     bottom: 150px;
 	background: transparent;
 	border: 0px solid rgba(255, 255, 255, .4);
-	color: white;
+	color: gray;
 	border-radius: 8px;
 	transition: all .5s ease;
 }
