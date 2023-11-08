@@ -261,14 +261,14 @@ nav >li> a {
     bottom: 0;
     left: 25%;
     background: white;
-    visibility: hidden;
+    visibility: visible;
     transform: scaleX(0);
     transition: all 0.3s ease-in-out 0s;
 }
 
 @media screen and (min-width: 600px) {
   nav ul li a {
-    font-size: 3em;
+    font-size: 2em;
   }
 }
 
@@ -286,14 +286,26 @@ nav >li> a {
     font-size: 3em ;
 	transition: all .5s ease;
 }
-.close span, .close span:before, .close span:after {
+.close  span:before, .close span:after {
     border-radius: 4px;
     height: 5px;
     width: 35px;
-    background: black;
+    background: white;
     position: absolute;
     display: block;
     content: "";
+}
+
+.close span:before {
+    bottom: 50px;
+    color: black;
+    transform: rotate(45deg);
+}
+
+.close span:after {
+    bottom: 30px;
+    color: black;
+    transform: rotate(-45deg);
 }
 
 aside {
@@ -301,11 +313,11 @@ aside {
 }
 
 .outer-close {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 85px;
-    height: 85px;
+    position: absolute; 
+    left: 250px;
+    bottom: 30px;
+    width: 5px;
+    height: 40px;
     cursor: pointer;
 }
 
@@ -315,18 +327,16 @@ aside {
 
 .close {
 	position: fixed;
-	top: 40px;
-	right: 60px;
-	color: black;
-	z-index: 3;
+	color: white;
+    bottom: 40px;
+    right: 60px;
+	z-index: 1;
 	cursor: pointer;
     
 }
 
 .outer-close {
     position: absolute;
-    right: 0;
-    top: 20px;
     width: 85px;
     height: 85px;
     cursor: pointer;
@@ -709,6 +719,10 @@ footer {
 /* Small screens (768px and down) */
 
 @media only screen and (max-width: 768px) {
+
+    *{
+        overflow: auto;
+    }
 
     .logo-center {
         width: 150px;
