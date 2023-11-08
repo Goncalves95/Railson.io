@@ -356,7 +356,7 @@ aside {
     left: 0;
     top: 0;
     opacity: 1;
-    z-index: 0;
+    z-index: 1;
     display: flex;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -563,7 +563,7 @@ aside {
     left: 0;
     background-size: cover;
     background-position: center;
-    z-index: -1;
+    z-index: 0;
     overflow: hidden;
     will-change: transform, opacity, filter;
     backface-visibility: hidden;
