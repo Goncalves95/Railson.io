@@ -580,9 +580,6 @@ aside {
 }
 
 @media (max-width: 0px) {
-    .fullscreen {
-        background: url('gif.mp4') center center / cover no-repeat;
-    }
 
     .fullscreen-vd {
         display: none;
@@ -649,53 +646,6 @@ aside {
   -----------------------------------------*/
 
 
-/*
-.meuaudio {
-    display: flex;
-    position: fixed;
-    justify-content: right;
-    align-items: flex-end;
-
-} 
--------- */
-
-#botoes {
-    display: flex;
-    position: absolute;
-    justify-items: center;
-    align-items: center;
-    gap: 30px;
-    bottom: 10px;
-}
-
-.button1,
-.button2,
-.button3 {
-    border: none;
-    text-align: center;
-    display: inline-flex;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    width: 100px;
-
-}
-
-#botoes img {
-    width: 100%;
-}
-
-.button1:hover,
-.button2:hover,
-.button3:hover {
-    background-color: gold;
-    border-radius: 20%;
-    opacity: 0.5;
-}
-
-.button-small-screens {
-    display: none;
-}
 
 .on_small_scrrens {
     display: none;
@@ -723,10 +673,6 @@ footer {
     bottom: 10px;
     justify-content: right;
     align-items: flex-end;
-}
-
-.whatsap i:hover {
-    color: gold;
 }
 
 /* Medium small screens (768px and up) */
@@ -812,7 +758,7 @@ footer {
         top: 0;
         left: 1;
         right: 1;
-        z-index: -1;
+        z-index: 0;
         /*apenas um -1 é necessário quando se trabalha com relative + absolute, sendo pai e filho*/
         width: 100%;
         height: 100%;
@@ -868,13 +814,7 @@ footer {
     .whatsap i {
         display: none;
     }
-
-    .button1,
-    .button2,
-    .button3 {
-        display: none;
-    }
-
+    
     footer {
         position: absolute;
         bottom: 0;
