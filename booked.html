@@ -100,7 +100,7 @@
                             us
                             anything.</p>
                         <p></p>
-                        <form id="form" onsubmit=" sendEmail(); reset; return false;" name="form" class="mt-2 mb-0">
+                        <form id="form" onsubmit=" sendEmail(); reset(); return false;" name="form" class="mt-2 mb-0">
                             <div class="">
                                 <div class="rounded-lg m-0 w-fit flex items-center gap-1">
                                     <div>
@@ -197,9 +197,9 @@
                 From : document.getElementById("email").value,
                 Subject : "New Contact Form Enquiry",
                 Body : "Name: " + document.getElementById("name").value 
-                + "<br> Email: " + document.getElementById("email").value
-                + "<br> Phone no: " + document.getElementById("phone").value
-                + "<br> Message: " + document.getElementById("message").value
+                    + "<br> Email: " + document.getElementById("email").value
+                    + "<br> Phone no: " + document.getElementById("phone").value
+                    + "<br> Message: " + document.getElementById("message").value
             }).then(
             message => alert("Message Sent Sucesfuly!")
             );
