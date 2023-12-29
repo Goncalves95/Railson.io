@@ -100,7 +100,7 @@
                             us
                             anything.</p>
                         <p></p>
-                        <form id="form" action="envia_fale.php" method="post" name="form" class="mt-2 mb-0">
+                        <form id="form" onsubmit="sendEmail(); return false;" name="form" class="mt-2 mb-0">
                             <div class="">
                                 <div class="rounded-lg m-0 w-fit flex items-center gap-1">
                                     <div>
@@ -132,57 +132,22 @@
                             <div class="relative">
                               <div class="fcf-form-group">
                                 <div class="fcf-input-group">
-                                    <input placeholder="Your name" type="text" id="Name" name="name" class="fcf-form-control" required>
+                                    <input placeholder="Your name" type="text" id="name" name="name" class="hover:cursor-pointer focus:cursor-auto rounded-lg w-full mt-2 mb-2 text-sm transition-all resize-none outline-none border border-gray-100 hover:border-gray-300 p-2.5" required>
                                 </div>
                             </div>
-                    
                             <div class="fcf-form-group">
                                 <div class="fcf-input-group">
-                                    <input placeholder="Your email" type="email" id="Email" name="email" class="fcf-form-control" required>
+                                    <input placeholder="Your email" type="email" id="email" name="email" class="hover:cursor-pointer focus:cursor-auto rounded-lg w-full mt-2 mb-2 text-sm transition-all resize-none outline-none border border-gray-100 hover:border-gray-300 p-2.5" required>
+                                </div>
+                            </div>
+                            <div class="fcf-form-group">
+                                <div class="fcf-input-group">
+                                    <input placeholder="Phone number" type="text" id="phone" name="phone" class="hover:cursor-pointer focus:cursor-auto rounded-lg w-full mt-2 mb-2 text-sm transition-all resize-none outline-none border border-gray-100 hover:border-gray-300 p-2.5" required>
                                 </div>
                             </div>
                                     <textarea
                                     class="hover:cursor-pointer focus:cursor-auto rounded-lg w-full mt-2 mb-2 text-sm transition-all resize-none outline-none border border-gray-100 hover:border-gray-300 p-2.5"
-                                    placeholder="Your message" name="message" id="" cols="30" rows="5"></textarea>
-                                <div class="upload-container flex items-center justify-between w-full">
-                                    <div class="drop-area w-fit rounded-md transition-all text-center">
-                                        <label for="file-input"
-                                            class="absolute right-[8px] top-[100px] bg-white/80 text-gray-800/50 text-xs border border-transparent select-none transition-all rounded-md no-underline hover:border-gray-300 w-fit cursor-pointer px-1.5 py-1 flex items-center [&>svg]:fill-gray-800/50">
-                                            <svg xmlns="http://www.w3.org/2000/svg" height="1em"
-                                                viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                                                <path
-                                                    d="M364.2 83.8c-24.4-24.4-64-24.4-88.4 0l-184 184c-42.1 42.1-42.1 110.3 0 152.4s110.3 42.1 152.4 0l152-152c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-152 152c-64 64-167.6 64-231.6 0s-64-167.6 0-231.6l184-184c46.3-46.3 121.3-46.3 167.6 0s46.3 121.3 0 167.6l-176 176c-28.6 28.6-75 28.6-103.6 0s-28.6-75 0-103.6l144-144c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-144 144c-6.7 6.7-6.7 17.7 0 24.4s17.7 6.7 24.4 0l176-176c24.4-24.4 24.4-64 0-88.4z" />
-                                            </svg>
-                                        </label>
-                                        <input name="file" type="file" id="file-input" accept="image/*"
-                                            class="hidden" />
-                                        <!-- Image upload input -->
-                                        <div
-                                            class="preview-container hidden rounded-lg items-center gap-2">
-                                            <div class="preview-image w-16 h-16 bg-cover bg-center rounded-md"></div>
-                                            <div>
-                                                <div class="flex items-baseline flex-col mb-2">
-                                                    <p class="_description text-black/50 text-xs">File name:</p>
-                                                    <span
-                                                        class="file-name text-left text-sm truncate lg:max-w-[402px] max-w-[220px]"></span>
-                                                </div>
-                                                <p
-                                                    class="close-button text-[11px] w-fit cursor-pointer transition-all rounded-md px-3 py-0.5 border border-black/10 text-xs hover:border-gray-300">
-                                                    Remove
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="w-form-done border border-black/10 bg-green-200 text-xs w-fit p-2 rounded-lg mt-2"
-                                style="display: none;">
-                                <p class="font-semibold mb-1">Thank you</p>
-                                <p>Your ticket has been sent.</p>
-                            </div>
-                            <div class="w-form-fail border border-black/10 bg-red-200 text-xs w-fit p-2 rounded-lg mt-2 max-w-[260px]"
-                                style="display: none;">
-                                <p class="font-semibold mb-1">Error</p>
+                                    placeholder="Your message" name="message" id="message" cols="30" rows="5"></textarea>
                             </div>
                             <div class="flex items-end justify-between mt-4">
                               
@@ -195,7 +160,6 @@
                 </div>
             </div>
         </div>
-    </body>
     <!-- Footer -->
   </div>
 </div>
@@ -222,6 +186,25 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="script.js"></script>
     <script src="insta.js"></script>
+    <script src=" https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host : "smtp.elasticemail.com",
+                Username : "fernandojcg22@gmail.com",
+                Password : "176C47C73ACE8ADB8965C93F33F76CD56BB4",
+                To : 'fernandojcg22@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : "New Contact Form Enquiry",
+                Body : "Name: " + documen.getElementById("name").value 
+                + "<br> Email: " + document.getElementById("email").value
+                + "<br> Phone no: " + document.getElementById("phone").value
+                + "<br> Message: " + document.getElementById("message").value
+            }).then(
+            message => alert("Message Sent Sucesfuly!")
+            );
+        }
+    </script>
 </body>
 
 </html>
