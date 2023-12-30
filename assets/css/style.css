@@ -1143,13 +1143,14 @@ a {
 
 .text-blk.section-text {
     color: rgb(147, 147, 147);
-    max-width: 750px;
+    max-width: 650px;
     margin-top: 25px;
     margin-right: 0px;
     margin-bottom: 0px;
     margin-left: 0px;
     font-size: 18px;
     line-height: 27px;
+    text-align: left;
 }
 
 .text-blk.section-head {
@@ -1189,7 +1190,7 @@ a {
     .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-6.wk-ipadp-12.content-one {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items:flex-start;
     }
 
     .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-6.wk-ipadp-12.img-one {
@@ -1229,6 +1230,10 @@ a {
     .text-blk.section-head {
         font-size: 20px;
         line-height: 35px;
+    }
+
+    .button {
+        justify-content: left;
     }
 
     .bg-image {
