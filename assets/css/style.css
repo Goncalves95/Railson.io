@@ -1201,8 +1201,9 @@ a {
     }
 
     .bg-image {
-        transform: rotateX(0deg) rotateY(0deg) rotateZ(-90deg) scaleX(1) scaleY(1) scaleZ(1);
-        width: 100%;
+        max-width: 70%;
+        height: 400px;
+        margin-top: 100px;
     }
 
     .responsive-container-block.container {
@@ -1228,6 +1229,11 @@ a {
     .text-blk.section-head {
         font-size: 20px;
         line-height: 35px;
+    }
+
+    .bg-image {
+        max-width: 70%;
+        height: 500px;
     }
 
     .responsive-container-block.big-container {
